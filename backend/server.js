@@ -4,10 +4,10 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import { v2 as cloudinary } from "cloudinary";
 
-import authRoutes from "./routes/authRoutes.js";
-import userRoutes from "./routes/userRoutes.js";
-// import postRoutes from "./routes/post.route.js";
-// import notificationRoutes from "./routes/notification.route.js";
+import authRoutes from "./routes/authRoute.js";
+import userRoutes from "./routes/userRoute.js";
+import postRoutes from "./routes/postRoute.js";
+import notificationRoutes from "./routes/notificationRoute.js";
 
 import connectMongoDB from "./db/connectMongoDB.js";
 
@@ -32,8 +32,8 @@ app.use(cookieParser());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
-// app.use("/api/posts", postRoutes);
-// app.use("/api/notifications", notificationRoutes);
+app.use("/api/posts", postRoutes);
+app.use("/api/notifications", notificationRoutes);
 
 // app.get("/", (req, res) => {
 //     res.send("Server is ready")
