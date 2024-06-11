@@ -21,7 +21,7 @@ const ProfilePage = () => {
     const profileImgRef = useRef(null);
 
     const isLoading = false;
-    const isMyProfile = false;
+    const isMyProfile = true;
 
     const user = {
         _id: "1",
